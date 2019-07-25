@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Vote from './views/Vote.vue'
+import Thanks from './views/Thanks.vue'
 
 Vue.use(Router)
 
@@ -19,6 +20,12 @@ export default new Router({
       name: 'vote',
       component: Vote
     },
+    {
+      path: '/thanks',
+      name: 'thanks',
+      component: Thanks
+    },
+
 
     {
       path: '/about',
