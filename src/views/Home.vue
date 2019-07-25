@@ -1,13 +1,47 @@
 <template>
-  <HelloWorld />
+  <v-container>
+    <v-layout row wrap>
+      <v-flex xs8 offset-xs2 class="pt-5">
+        <v-card dark color="primary" class="mt-5">
+          <v-card-title primary-title>
+            <v-flex xs12>
+              <div class="headline">
+                Kunci Private Pemilih
+              </div>
+              <v-flex xs12>
+                <v-text-field
+                  label="Nilai n"
+                ></v-text-field>
+              </v-flex>
+              <v-flex xs12>
+                <v-text-field
+                  label="Nilai e"
+                ></v-text-field>
+              </v-flex>
+              <v-flex xs12>
+                <v-text-field
+                  label="Nilai c"
+                ></v-text-field>
+              </v-flex>
+            </v-flex>
+          </v-card-title>
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn fab drak small color="orange" class="mr-5">
+              <v-icon dark>info</v-icon>
+            </v-btn>
+            <v-btn depressed color="orange" class="mr-5">Submit</v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-flex>
+    </v-layout>
+  </v-container>
 </template>
 
 <script>
-import HelloWorld from '../components/HelloWorld';
 
 export default {
   components: {
-    HelloWorld,
   },
 };
 </script>
