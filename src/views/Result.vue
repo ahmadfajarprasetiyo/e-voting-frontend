@@ -25,7 +25,7 @@
           </v-card-title>
           <v-card-actions>
             <v-spacer></v-spacer>
-            <v-btn depressed color="orange" class="mr-5">Home</v-btn>
+            <v-btn depressed color="orange" class="mr-5" @click="goto_home()">Home</v-btn>
           </v-card-actions>
         </v-card>
       </v-flex>
@@ -64,6 +64,12 @@ export default {
           }
         ]
     }
+  },
+  methods: {
+    goto_home: function(){
+      this.$router.push({name: "home"})
+    }
   }
+
 };
 </script>

@@ -13,7 +13,7 @@
             <div class="headline">Calon 1</div>
           </v-card-title>
           <v-card-actions>
-            <v-btn depressed block color="orange" class="mr-5">Pilih</v-btn>
+            <v-btn depressed block color="orange" class="mr-5" @click="goto_thanks">Pilih</v-btn>
           </v-card-actions>
         </v-card>
       </v-flex>
@@ -29,7 +29,7 @@
             <div class="headline">Calon 2</div>
           </v-card-title>
           <v-card-actions>
-            <v-btn depressed block color="orange" class="mr-5">Pilih</v-btn>
+            <v-btn depressed block color="orange" class="mr-5" @click="goto_thanks">Pilih</v-btn>
           </v-card-actions>
         </v-card>
 
@@ -45,6 +45,11 @@ export default {
   data () {
     return {
       myImage: require('@/assets/user.png')
+    }
+  },
+  methods: {
+    goto_thanks: function(){
+      this.$router.push({name: "thanks"})
     }
   }
 }

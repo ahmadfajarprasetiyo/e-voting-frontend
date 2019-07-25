@@ -30,7 +30,7 @@
             <v-btn fab drak small color="orange" class="mr-5" @click="dialog = true">
               <v-icon dark>info</v-icon>
             </v-btn>
-            <v-btn depressed color="orange" class="mr-5">Submit</v-btn>
+            <v-btn depressed color="orange" class="mr-5" @click="goto_vote">Submit</v-btn>
           </v-card-actions>
         </v-card>
       </v-flex>
@@ -79,6 +79,11 @@ export default {
   data () {
     return {
       dialog: false
+    }
+  },
+  methods: {
+    goto_vote: function(){
+      this.$router.push({name: "vote"})
     }
   }
 };
