@@ -27,7 +27,7 @@
           </v-card-title>
           <v-card-actions>
             <v-spacer></v-spacer>
-            <v-btn fab drak small color="orange" class="mr-5"@click="dialog = true">
+            <v-btn fab drak small color="orange" class="mr-5" @click="dialog = true">
               <v-icon dark>info</v-icon>
             </v-btn>
             <v-btn depressed color="orange" class="mr-5">Submit</v-btn>
