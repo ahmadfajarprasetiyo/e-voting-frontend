@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Vote from './views/Vote.vue'
 import Thanks from './views/Thanks.vue'
+import Result from './views/Result.vue'
 
 Vue.use(Router)
 
@@ -25,6 +26,12 @@ export default new Router({
       name: 'thanks',
       component: Thanks
     },
+    {
+      path: '/result',
+      name: 'result',
+      component: Result
+    },
+
 
 
     {
