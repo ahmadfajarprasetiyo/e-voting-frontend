@@ -11,16 +11,19 @@
               <v-flex xs12>
                 <v-text-field
                   label="Nilai n"
+                  v-model="nilai_n"
                 ></v-text-field>
               </v-flex>
               <v-flex xs12>
                 <v-text-field
                   label="Nilai e"
+                  v-model="nilai_e"
                 ></v-text-field>
               </v-flex>
               <v-flex xs12>
                 <v-text-field
-                  label="Nilai c"
+                  label="Nilai d"
+                  v-model="nilai_d"
                 ></v-text-field>
               </v-flex>
             </v-flex>
@@ -30,7 +33,7 @@
             <v-btn fab drak small color="orange" class="mr-5" @click="dialog = true">
               <v-icon dark>info</v-icon>
             </v-btn>
-            <v-btn depressed color="orange" class="mr-5" @click="goto_vote">Submit</v-btn>
+            <v-btn depressed color="orange" class="mr-5" @click="store_private_key">Submit</v-btn>
           </v-card-actions>
         </v-card>
       </v-flex>
@@ -78,12 +81,25 @@ export default {
   },
   data () {
     return {
-      dialog: false
+      dialog: false,
+      nilai_n: null,
+      nilai_e: null,
+      nilai_d: null
     }
   },
   methods: {
     goto_vote: function(){
       this.$router.push({name: "vote"})
+    },
+    store_private_key: function(){
+      var payload = {
+        "nilai_n": this.nilai_n,
+        "nilai_e": this.nilai_e,
+        "nilai_d": this.nilai_d,
+      }
+
+      this.$store.commit('updatePrivateKey', payload)
+      this.goto_vote()
     }
   }
 };
